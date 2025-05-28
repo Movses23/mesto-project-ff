@@ -7,3 +7,31 @@
 // @todo: Функция удаления карточки
 
 // @todo: Вывести карточки на страницу
+const cardTemplate = document.querySelector('#card-template').content;
+const allCards = document.querySelector('.places__list');
+
+initialCards.forEach(function(item) {
+    const card = addCards(item, deleteCard);
+    allCards.append(card);
+});
+
+
+function addCards (cardsContent, deleteCard) {
+    
+    const cardsElement = cardTemplate.querySelector('.places__item').cloneNode(true);
+    const deleteButton = cardsElement.querySelector('.card__delete-button');
+
+    cardsElement.querySelector('.card__title').textContent = cardsContent.name;
+    cardsElement.querySelector('.card__image').src = cardsContent.link;
+
+    deleteButton.addEventListener('click', function (evt) {
+        deleteCard(cardsElement);
+    });
+
+    return cardsElement;
+}
+
+
+function deleteCard(cardsElement) {
+    cardsElement.remove();
+}
