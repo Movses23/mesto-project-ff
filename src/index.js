@@ -17,6 +17,8 @@ const nameDisplayElement = document.querySelector('.profile__title');
 const jobDisplayElement = document.querySelector('.profile__description');
 const nameInputCard = formElementCard.querySelector('.popup__input_type_card-name');
 const linkInput = formElementCard.querySelector('.popup__input_type_url');
+const nameInput = formEditProfile.querySelector('.popup__input_type_name');
+const jobInput = formEditProfile.querySelector('.popup__input_type_description');
 
 initialCards.forEach((item) => {
     const card = createCard(item, deleteCard, openImage);
@@ -49,9 +51,6 @@ function openImage (addCard) {
 
   openModal(popupImage);
 };
-
-const nameInput = formEditProfile.querySelector('.popup__input_type_name');
-const jobInput = formEditProfile.querySelector('.popup__input_type_description');
 
 function submitEditProfileForm(evt) {
     evt.preventDefault(); 
