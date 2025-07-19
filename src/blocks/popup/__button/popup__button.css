@@ -25,3 +25,11 @@
     line-height: 17px;
   }
 }
+
+.popup__button_disabled {
+  cursor: not-allowed; /* Изменение курсора на "запрещающий" */
+  background-color: transparent; /* Изменение цвета фона */
+  color: #C4C4C4; /* Изменение цвета текста */
+  pointer-events: none; /* Запрет на взаимодействие с кнопкой */
+  border: 1px solid #C4C4C4;
+}

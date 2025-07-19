@@ -7,6 +7,11 @@
   background-size: cover;
   background-position: center;
   margin: 0 29px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 740px) {
@@ -19,4 +24,18 @@
   .profile__image {
     margin-right: 0;
   }
+}
+
+.profile__image::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.profile__image:hover::after {
+  opacity: 1;
 }

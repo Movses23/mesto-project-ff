@@ -1,23 +1,52 @@
-@import url('./__content/popup__content.css');
-@import url('./__content/_content/popup__content_content_image.css');
-@import url('./__close/popup__close.css');
-@import url('./__title/popup__title.css');
-@import url('./__form/popup__form.css');
-@import url('./__input/popup__input.css');
-@import url('./__button/popup__button.css');
-@import url('./__caption/popup__caption.css');
-@import url('./__image/popup__image.css');
+@import url("./__content/popup__content.css");
+@import url("./__content/_content/popup__content_content_image.css");
+@import url("./__close/popup__close.css");
+@import url("./__title/popup__title.css");
+@import url("./__form/popup__form.css");
+@import url("./__input/popup__input.css");
+@import url("./__button/popup__button.css");
+@import url("./__caption/popup__caption.css");
+@import url("./__image/popup__image.css");
 
 .popup {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 10;
   inset: 0;
   visibility: hidden;
   transition: visibility 0.6s, opacity 0.6s linear;
   opacity: 0;
+}
+
+.popup__error {
+  color: #ff0000;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.popup__content-delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  padding: 34px 36px 36px 36px;
+  min-height: 181px;
+}
+
+.popup__delete-text {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.popup__button_delete {
+  margin-top: 38px;
 }
