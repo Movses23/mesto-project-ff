@@ -32,15 +32,14 @@ function createCard(addCard, deleteCard, openImage, toggleLikePromise, currentUs
     renderLikes(addCard);
 
     if (addCard.owner._id === currentUserId) {
-  deleteButton.style.display = 'block';
-} else {
-  deleteButton.style.display = 'none';
-} 
+        deleteButton.style.display = 'block';
+    } else {
+        deleteButton.style.display = 'none';
+    };
          
     deleteButton.addEventListener('click', () => {
     openConfirmDeletePopup(addCard._id, cards);
-  });;
-
+    });;
 
 likeButton.addEventListener('click', () => {
         handleLike(addCard._id, likeButton.classList.contains('card__like-button_is-active'), renderLikes);
@@ -60,7 +59,6 @@ function renderLikes(cards) {
 
     return cards;
 };
-
     
 function deleteCard(cards) { 
     cards.remove();

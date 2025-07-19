@@ -82,7 +82,7 @@ export const updateUserAvatar = (avatarUrl) => {
   return fetch(`${config.baseUrl}/users/me/avatar`, {
     method: "PATCH",
     headers: config.headers,
-    body: JSON.stringify({ avatar: avatarUrl }), // Важно: ключ avatar
+    body: JSON.stringify({ avatar: avatarUrl }),
   }).then((res) => {
     if (res.ok) {
       return res.json();

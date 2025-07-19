@@ -11,7 +11,7 @@ function toggleButtonState(inputList, buttonElement) {
   } else {
     buttonElement.classList.add("popup__button_disabled");
   }
-}
+};
 
 function setEventListeners(formElement) {
   const inputList = Array.from(formElement.querySelectorAll(`.popup__input`));
@@ -25,7 +25,7 @@ function setEventListeners(formElement) {
       toggleButtonState(inputList, buttonElement);
     });
   });
-}
+};
 
 export function enableValidation(config) {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
@@ -33,7 +33,7 @@ export function enableValidation(config) {
   formList.forEach((formElement) => {
     setEventListeners(formElement);
   });
-}
+};
 
 export function clearValidation(formElement, config) {
   const inputList = Array.from(
@@ -47,7 +47,7 @@ export function clearValidation(formElement, config) {
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement);
-}
+};
 
 const isValid = (formElement, inputElement) => {
   if (inputElement.validity.patternMismatch) {

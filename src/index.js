@@ -28,14 +28,10 @@ const modalImage = popupImage.querySelector(".popup__image");
 const modalCaption = popupImage.querySelector(".popup__caption");
 const nameDisplayElement = document.querySelector(".profile__title");
 const jobDisplayElement = document.querySelector(".profile__description");
-const nameInputCard = formElementCard.querySelector(
-  ".popup__input_type_card-name"
-);
+const nameInputCard = formElementCard.querySelector(".popup__input_type_card-name");
 const linkInput = formElementCard.querySelector(".popup__input_type_url");
 const nameInput = formEditProfile.querySelector(".popup__input_type_name");
-const jobInput = formEditProfile.querySelector(
-  ".popup__input_type_description"
-);
+const jobInput = formEditProfile.querySelector(".popup__input_type_description");
 const popupConfirm = document.querySelector(".popup_type_delete");
 const buttonConfirm = popupConfirm.querySelector(".popup__button_delete");
 let cardToDelete;
@@ -63,7 +59,7 @@ function renderButtonLoading(
     button.textContent = defaultText;
     button.disabled = false;
   }
-}
+};
 
 editButton.addEventListener("click", () => {
   renderButtonLoading(profileSaveButton, false);
@@ -110,7 +106,7 @@ function openImage(addCard) {
   modalCaption.textContent = addCard.name;
 
   openModal(popupImage);
-}
+};
 
 function submitEditProfileForm(evt) {
   evt.preventDefault();
@@ -131,7 +127,7 @@ function submitEditProfileForm(evt) {
     .finally(() => {
       renderButtonLoading(profileSaveButton, false);
     });
-}
+};
 
 function handleFormSubmitCard(evt) {
   evt.preventDefault();
@@ -164,7 +160,7 @@ function handleFormSubmitCard(evt) {
     .finally(() => {
       renderButtonLoading(cardSaveButton, false);
     });
-}
+};
 
 enableValidation({
   formSelector: ".popup__form",
